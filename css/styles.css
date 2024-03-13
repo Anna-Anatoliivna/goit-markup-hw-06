@@ -524,10 +524,10 @@ img {
 }
 .team-list {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   gap: 32px;
+  justify-content: center;
+  align-items: center;
 }
 .team-list-item {
   border-radius: 0px 0px 4px 4px;
@@ -590,6 +590,16 @@ img {
   background: #404bbf;
 }
 @media only screen and (min-width: 768px) {
+  .team.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
 }
 
 @media only screen and (min-width: 1158px) {
@@ -597,19 +607,93 @@ img {
     padding-top: 120px;
     padding-bottom: 120px;
   }
-
-  .team.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   .team-list {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
+    flex-wrap: nowrap;
   }
+
   .team-title {
     text-transform: capitalize;
   }
 }
 /* ===============portfolio================= */
+.portfolio-section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio-list-item {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.portfolio-item-box {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+.portfolio-item-title {
+  margin-bottom: 8px;
+  color: #2e2f42;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+.portfolio-text-discrib {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+.overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  padding: 40px 32px;
+  background: #4d5ae5;
+  color: #f4f4fd;
+  font-size: 16px;
+  line-height: 24px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+}
+.overlay:hover .overlay-text {
+  transform: translateY(0%);
+}
+
+@media only screen and (min-width: 768px) {
+  .portfolio-list {
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .portfolio-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .portfolio-list {
+    row-gap: 48px;
+  }
+}
