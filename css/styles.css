@@ -728,6 +728,10 @@ img {
   padding-right: 16px;
   padding-left: 16px;
 }
+.logo-text-footer {
+  display: block;
+  margin-bottom: 72px;
+}
 
 .text-footer {
   max-width: 288px;
@@ -737,7 +741,8 @@ img {
   letter-spacing: 0.02em;
 }
 .logo-footer {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   margin-bottom: 16px;
   color: #4d5ae5;
   font-weight: 700;
@@ -751,6 +756,9 @@ img {
 .text-white-color {
   color: #f4f4fd;
 }
+.media-footer {
+  margin-bottom: 72px;
+}
 .text-media-footer {
   margin-bottom: 16px;
   color: #fff;
@@ -759,6 +767,7 @@ img {
   line-height: 24px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 .social-list-footer {
   display: flex;
@@ -766,6 +775,8 @@ img {
   justify-content: center;
   align-items: center;
   max-width: 208px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .social-list-item-footer {
   width: 40px;
@@ -786,9 +797,7 @@ img {
 .social-list-link-footer:focus {
   background: #31d0aa;
 }
-.subscribe-footer {
-  margin-left: 80px;
-}
+
 .subscribe-footer-title {
   margin-bottom: 16px;
   color: #ffffff;
@@ -796,14 +805,13 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: center;
 }
-.subscribe-form-footer {
-  display: flex;
-  gap: 24px;
-}
+
 .subscribe-form-footer-input {
-  width: 264px;
+  width: 288px;
   height: 40px;
+  margin-bottom: 16px;
   padding-left: 16px;
   border: 1px solid #ffffff;
   border-radius: 4px;
@@ -823,6 +831,8 @@ img {
   align-items: center;
   min-width: 165px;
   height: 40px;
+  margin-right: auto;
+  margin-left: auto;
   padding: 8px 24px;
   border: none;
   border-radius: 4px;
@@ -854,10 +864,24 @@ img {
     align-items: baseline;
   }
   .logo-footer {
+    display: inline-block;
     margin-bottom: 18px;
   }
   .text-footer {
     max-width: 264px;
+  }
+  .text-media-footer {
+    text-align: left;
+  }
+  .subscribe-footer-title {
+    text-align: left;
+  }
+  .subscribe-form-footer {
+    display: flex;
+    gap: 24px;
+  }
+  .subscribe-form-footer-input {
+    width: 264px;
   }
 }
 
@@ -868,6 +892,14 @@ img {
   }
   .logo-text-footer {
     margin-right: 120px;
+    margin-bottom: 0;
+  }
+
+  .media-footer {
+    margin-bottom: 0;
+  }
+  .subscribe-footer {
+    margin-left: 80px;
   }
 }
 /* ==========modal window============== */
