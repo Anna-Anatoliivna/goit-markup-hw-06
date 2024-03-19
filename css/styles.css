@@ -889,7 +889,7 @@ img {
     flex-wrap: wrap;
     gap: 72px 24px;
     align-items: baseline;
-    max-width: 584px;
+    max-width: calc(264px * 2 + 24px);
   }
   .logo-text-footer {
     margin-bottom: 0;
